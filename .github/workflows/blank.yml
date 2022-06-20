@@ -20,3 +20,5 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: check context
+        uses: hmarr/debug-action@v2
