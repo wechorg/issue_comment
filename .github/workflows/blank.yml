@@ -10,15 +10,15 @@ jobs:
     name: Run integration tests
     runs-on: ubuntu-latest
     steps:
-      - name: Pull Request Comment Trigger
-        uses: Khan/pull-request-comment-trigger@1.0.0
-        id: check
-        with:
-          trigger: '/test'
-          reaction: 'eyes'
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+#       - name: Pull Request Comment Trigger
+#         uses: Khan/pull-request-comment-trigger@1.0.0
+#         id: check
+#         with:
+#           trigger: '/test'
+#           reaction: 'eyes'
+#         env:
+#           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: check context
+      - name: checkcontext
         uses: hmarr/debug-action@v2
