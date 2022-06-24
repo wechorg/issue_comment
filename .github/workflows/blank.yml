@@ -20,5 +20,13 @@ jobs:
 #           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Check files
+        run: ls
       - name: checkcontext
         uses: hmarr/debug-action@v2
+      - name: Checkout merge cormit
+        uses: actions/checkout@v3
+        with:
+          ref: "refs/pull/${{ github.event.issue.number }}/merge"
+      - name: check updated files
+        run: ls
